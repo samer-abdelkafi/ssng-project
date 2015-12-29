@@ -1,0 +1,11 @@
+<style>
+    .swagger-validator {
+        display: none;
+    }
+</style>
+<div class="well page">
+    <h3 ng-show="isLoading">loading ...</h3>
+    <div swagger-ui url="swaggerUrl" loading="isLoading" parser="json" api-explorer="true" trusted-sources="true"
+         error-handler="myErrorHandler">
+    </div>
+</div>

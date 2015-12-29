@@ -1,0 +1,48 @@
+<div class="bg-extended">
+    <div class="align-vertical-center">
+        <div class="container">
+            <div class="row">
+
+                <div class="well col-sm-offset-3 col-sm-6">
+
+                    <div class="well-heading well-primary">
+                        <h1>Sign in your account</h1>
+                    </div>
+
+                    <form class="well-body">
+                        <div class="form-group label-floating" ng-class="{'has-error is-focused' : authenticationError}">
+                            <label class="control-label" for="login">Login</label>
+                            <input id="login" type="text" class="form-control" ng-model="username"
+                                   required="required"/>
+                            <span ng-show="authenticationError" class="help-block">
+                                Please check your credentials and try again.
+                            </span>
+
+                        </div>
+
+                        <div class="form-group label-floating" >
+                            <label class="control-label" for="password">Password</label>
+                            <input id="password" type="password" class="form-control" ng-model="password"
+                                   required="required"/>
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="rememberMe"/><span> Remember me</span>
+                            </label>
+                        </div>
+
+                        <br/>
+
+                        <div class="col-sm-offset-3 col-sm-6">
+                            <button class="btn btn-lg btn-primary btn-block" ng-click="login()">
+                                login
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

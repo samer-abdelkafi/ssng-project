@@ -1,0 +1,47 @@
+{
+  "name": "example",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "2.1.4",
+    "angular": "~1.4",
+    "angular-route": "~1.4",
+    "angular-resource": "~1.4",
+    "angular-sanitize": "~1.4",
+    "angular-animate": "~1.4",
+    "angular-spinkit": "0.3.3",
+    "angular-http-auth": "1.2.2",
+    "bootstrap": "3.3.5",
+    "bootstrap-material-design": "0.4.4",
+    "angular-swagger-ui": "~0.2.3"
+  },
+  "private": true,
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    },
+    "bootstrap-material-design": {
+      "dependencies": {
+        "jquery": "~2.1.1",
+        "bootstrap": "~3.3.5"
+      }
+    },
+    "angular-http-auth": {
+      "dependencies": {
+        "angular": "~1.4"
+      }
+    },
+    "angular-swagger-ui": {
+      "dependencies": {
+        "angular": "~1.4",
+        "angular-sanitize": "~1.4",
+        "bootstrap-less-only": "~3.3"
+      }
+    }
+  },
+  "resolutions": {
+    "angular": "1.4.8"
+  }
+}

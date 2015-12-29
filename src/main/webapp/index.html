@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/png" href="resources/img/favicon.jpeg" />
+    <!-- inject:css -->
+    <link rel="stylesheet" href="resources/vendor/css/lib.min.css">
+    <link rel="stylesheet" href="resources/css/main.css">
+    <!-- endinject -->
+    <title></title>
+</head>
+<body>
+
+
+<div class="navbar navbar-default" ng-class="{show : authenticated}" style="display: none" >
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="javascript:void(0)">Brand</a>
+    </div>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="#/users">Users</a></li>
+            <li><a href="#/apiDoc">API Doc.</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="javascript:void(0)" data-target="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <img class="img-circle profile-image"
+                         ng-src="http://i.forbesimg.com/media/lists/people/{{account.firstName | lowercase}}-{{account.lastName | lowercase}}_50x50.jpg" >
+                    {{account.firstName}} {{account.lastName}}
+                    <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="javascript:void(0)">Action</a></li>
+                    <li><a href="javascript:void(0)">Another action</a></li>
+                    <li><a href="javascript:void(0)">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#/logout"><i class="glyphicon glyphicon-off"></i> Sign out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div style="position: relative">
+        <div ng-view="" class="fade"></div>
+    </div>
+</div>
+
+<!-- inject:js -->
+
+<script src="resources/vendor/js/lib.min.js"></script>
+
+<script src="resources/js/app.js"></script>
+
+<script src="resources/js/controllers.js"></script>
+
+<script src="resources/js/services.js"></script>
+
+<!-- endinject -->
+
+</body>
+</html>

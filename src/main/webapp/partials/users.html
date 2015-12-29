@@ -1,0 +1,34 @@
+<div class="well page">
+
+    <h3>Users list</h3>
+
+
+    <div id="userList" >
+        <div class="input-group">
+            <input class="form-control" id="search" name="search" placeholder="Search for" ng-model="query"
+                   required="required"/>
+              <span class="input-group-btn">
+                  <button type="submit" class="btn btn-default">
+                      <i class="glyphicon glyphicon-search"></i>
+                  </button>
+              </span>
+        </div>
+        <div class="list-group">
+            <div class="list-group-item">
+                <div ng-repeat="user in users | filter:query" class="list-group-item" style="margin-top:16px">
+                    <div class="row-picture">
+                        <img class="circle"
+                             ng-src="http://i.forbesimg.com/media/lists/people/{{user.firstName | lowercase}}-{{user.familyName | lowercase}}_50x50.jpg"
+                             alt="icon">
+                    </div>
+                    <div class="row-content">
+                        <h4 class="list-group-item-heading">{{user.firstName}} {{user.familyName}}</h4>
+
+                        <p class="list-group-item-text"><i class="glyphicon glyphicon-envelope"></i> {{user.email}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

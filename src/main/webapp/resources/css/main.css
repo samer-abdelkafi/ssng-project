@@ -1,0 +1,76 @@
+.fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  opacity: 1;
+}
+.fade.ng-enter,
+.fade.ng-leave {
+  -webkit-transition: all 1s ease;
+  transition: all 0.5s ease;
+}
+.fade.ng-enter {
+  opacity: 0;
+}
+.fade.ng-enter-active {
+  opacity: 1;
+}
+.fade.ng-leave {
+  opacity: 1;
+}
+.fade.ng-leave-active {
+  opacity: 0;
+}
+
+.profile-image {
+  width: 30px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+
+.bg-extended {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ddd;
+  min-width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.align-vertical-center {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.well-heading {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 120px;
+}
+
+.well-heading h1 {
+  color: #FFF;
+  position: absolute;
+  bottom: 10px;
+  padding-left: 35px;
+}
+
+.well-body {
+  margin: 150px 30px 30px 30px;
+}
+
+
+.three-dots-row-spinner {
+  background-color: #009688;
+  width: 50px;
+  height: 50px;
+}
+
+
+
