@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var concatVendor = require('gulp-concat-vendor');
 var uglify = require('gulp-uglify');
-var minify = require('gulp-minify-css')
+var nano = require('gulp-cssnano');
 var mainBowerFiles = require('main-bower-files');
 var inject = require('gulp-inject');
 var runSequence = require('run-sequence');
@@ -11,7 +11,7 @@ var clone = require('gulp-clone');
 var order = require('gulp-order');
 var series = require('stream-series');
 var flatten = require('gulp-flatten');
-var clean = require('gulp-clean');
+var rimraf = require('gulp-rimraf');
 var debug = require('gulp-debug');
 var uncss = require('gulp-uncss');
 
@@ -27,7 +27,7 @@ var vendorCss;
 
 gulp.task('clean', function () {
     return gulp.src('src/main/webapp/resources/vendor', {read: false})
-        .pipe(clean());
+        .pipe(rimraf());
 });
 
 
@@ -48,7 +48,7 @@ gulp.task('lib-js-files', function () {
 gulp.task('lib-css-files', function () {
     vendorCss = gulp.src(mainBowerFiles('**/*.css'),{ base: 'bower_components' })//gulp.src(['bower_components/**/dist/css/*.css', '!bower_components/**/dist/css/*.min.css'])
     //.pipe(debug({title: 'lib-css-files :'}))
-        .pipe(minify())
+        .pipe(nano())
         .pipe(concat('lib.min.css'))
         .pipe(gulp.dest('src/main/webapp/resources/vendor/css'));
 
