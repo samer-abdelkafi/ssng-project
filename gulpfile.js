@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var concatVendor = require('gulp-concat-vendor');
 var uglify = require('gulp-uglify');
-var nano = require('gulp-cssnano');
+var minify = require('gulp-minify-css')
 var mainBowerFiles = require('main-bower-files');
 var inject = require('gulp-inject');
 var runSequence = require('run-sequence');
@@ -48,7 +48,7 @@ gulp.task('lib-js-files', function () {
 gulp.task('lib-css-files', function () {
     vendorCss = gulp.src(mainBowerFiles('**/*.css'),{ base: 'bower_components' })//gulp.src(['bower_components/**/dist/css/*.css', '!bower_components/**/dist/css/*.min.css'])
     //.pipe(debug({title: 'lib-css-files :'}))
-        .pipe(nano())
+        .pipe(minify())
         .pipe(concat('lib.min.css'))
         .pipe(gulp.dest('src/main/webapp/resources/vendor/css'));
 
