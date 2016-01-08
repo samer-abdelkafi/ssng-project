@@ -93,8 +93,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
             .rememberMe()
-                //.rememberMeServices(rememberMeServices)
-
+                .rememberMeServices(rememberMeServices)
                 .key(REMEMBER_ME_KEY)
                 .and();
     }

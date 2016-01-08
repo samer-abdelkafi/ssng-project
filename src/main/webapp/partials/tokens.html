@@ -1,0 +1,41 @@
+<div class="well page">
+
+    <h3>Autenticated Users</h3>
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon glyphicon glyphicon-search"></span>
+            <input type="text" id="addon3a" class="form-control" placeholder="Search for" ng-model="query">
+        </div>
+    </div>
+
+
+    <div id="userList">
+
+        <div class="list-group">
+            <div class="list-group-item">
+                <div ng-repeat="token in tokens | filter:query" class="list-group-item" style="margin-top:16px">
+                    <div class="row-picture">
+                        <img class="circle"
+                             ng-src="http://i.forbesimg.com/media/lists/people/{{token.firstName | lowercase}}-{{token.familyName | lowercase}}_50x50.jpg"
+                             alt="icon">
+                    </div>
+                    <div class="row-content">
+                        <h4 class="list-group-item-heading">{{token.firstName}} {{token.familyName}}</h4>
+
+                        <p class="list-group-item-text"><i class="glyphicon glyphicon-time"></i>
+                            {{token.date|date:'medium'}}
+                        </p>
+
+                        <p ng-switch on="token.browser">
+                            <i class="fa fa-firefox" ng-switch-when="Firefox"></i>
+                            <i class="fa fa-chrome" ng-switch-when="Chrome"></i>
+                            <i class="fa fa-internet-explorer" ng-switch-when="Trident"></i>
+                            <i class="fa fa-cloud" ng-switch-default></i>
+                            IP: {{token.ipAddress}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

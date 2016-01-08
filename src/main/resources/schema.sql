@@ -23,7 +23,7 @@ id_authority BIGINT);
 create table token (
 series varchar(50) primary key,
 value varchar(50),
-date Date,
+date timestamp,
 ip_address varchar(50),
 user_agent varchar(200),
 user_login varchar(50));

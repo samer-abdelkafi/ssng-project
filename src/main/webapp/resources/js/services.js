@@ -90,6 +90,17 @@ myapp.service('AuthSharedService', function ($rootScope, $http, $resource, authS
     };
 });
 
+myapp.service('HomeService', function ($log, $resource) {
+    return {
+        getTechno: function () {
+            var userResource = $resource('resources/json/techno.json', {}, {
+                query: {method: 'GET', params: {}, isArray: true}
+            });
+            return userResource.query();
+        }
+    }
+});
+
 
 myapp.service('UsersService', function ($log, $resource) {
     return {
@@ -98,6 +109,18 @@ myapp.service('UsersService', function ($log, $resource) {
                 query: {method: 'GET', params: {}, isArray: true}
             });
             return userResource.query();
+        }
+    }
+});
+
+
+myapp.service('TokensService', function ($log, $resource) {
+    return {
+        getAll: function () {
+            var tokensResource = $resource('security/tokens', {}, {
+                query: {method: 'GET', params: {}, isArray: true}
+            });
+            return tokensResource.query();
         }
     }
 });

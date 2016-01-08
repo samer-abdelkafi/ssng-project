@@ -8,9 +8,6 @@ import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * Created by b002ihq on 12/11/2015.
- */
 @Entity
 @Table(name = "token")
 public class Token implements Serializable {

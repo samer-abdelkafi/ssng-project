@@ -1,5 +1,8 @@
 <div class="bg-extended">
+
+
     <div class="align-vertical-center">
+
         <div class="container">
             <div class="row">
 
@@ -10,7 +13,19 @@
                     </div>
 
                     <form class="well-body">
-                        <div class="form-group label-floating" ng-class="{'has-error is-focused' : authenticationError}">
+
+                        <div class="alert alert-dismissible alert-info">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>Test users!</strong> <br/>
+                            <ul>
+                                <li><strong>steve / steve</strong> with admin role</li>
+                                <li><strong>bill / bill</strong> with user role</li>
+                            </ul>
+                        </div>
+
+
+                        <div class="form-group label-floating"
+                             ng-class="{'has-error is-focused' : authenticationError}">
                             <label class="control-label" for="login">Login</label>
                             <input id="login" type="text" class="form-control" ng-model="username"
                                    required="required"/>
@@ -20,7 +35,7 @@
 
                         </div>
 
-                        <div class="form-group label-floating" >
+                        <div class="form-group label-floating">
                             <label class="control-label" for="password">Password</label>
                             <input id="password" type="password" class="form-control" ng-model="password"
                                    required="required"/>

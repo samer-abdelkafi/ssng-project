@@ -15,6 +15,7 @@ myapp.config(function ($routeProvider, USER_ROLES) {
 
     $routeProvider.when("/home", {
         templateUrl: "partials/home.html",
+        controller: 'HomeController',
         access: {
             loginRequired: true,
             authorizedRoles: [USER_ROLES.all]
@@ -31,6 +32,13 @@ myapp.config(function ($routeProvider, USER_ROLES) {
     }).when('/apiDoc', {
         templateUrl: 'partials/apiDoc.html',
         controller: 'ApiDocController',
+        access: {
+            loginRequired: true,
+            authorizedRoles: [USER_ROLES.all]
+        }
+    }).when('/tokens', {
+        templateUrl: 'partials/tokens.html',
+        controller: 'TokensController',
         access: {
             loginRequired: true,
             authorizedRoles: [USER_ROLES.all]
@@ -63,7 +71,7 @@ myapp.config(function ($routeProvider, USER_ROLES) {
             authorizedRoles: [USER_ROLES.all]
         }
     }).otherwise({
-        redirectTo: '/error',
+        redirectTo: '/error/404',
         access: {
             loginRequired: false,
             authorizedRoles: [USER_ROLES.all]

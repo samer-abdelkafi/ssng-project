@@ -6,20 +6,25 @@
   height: 100%;
   opacity: 1;
 }
+
 .fade.ng-enter,
 .fade.ng-leave {
   -webkit-transition: all 1s ease;
   transition: all 0.5s ease;
 }
+
 .fade.ng-enter {
   opacity: 0;
 }
+
 .fade.ng-enter-active {
   opacity: 1;
 }
+
 .fade.ng-leave {
   opacity: 1;
 }
+
 .fade.ng-leave-active {
   opacity: 0;
 }
@@ -29,7 +34,6 @@
   margin-top: -5px;
   margin-bottom: -5px;
 }
-
 
 .bg-extended {
   position: fixed;
@@ -65,12 +69,36 @@
   margin: 150px 30px 30px 30px;
 }
 
-
 .three-dots-row-spinner {
   background-color: #009688;
   width: 50px;
   height: 50px;
 }
 
+.social-icons {
+  margin: 20px;
+}
 
+.social-icons a {
+  margin-right: 5px;
+}
 
+.social-icons .fa-linkedin {
+  color: #0085AE;
+}
+
+.social-icons .fa-github {
+  color: #070709;
+}
+
+.social-icons .fa-twitter {
+  color: #32CCFE;
+}
+
+.social-icons .fa-wordpress {
+  color: #21759b;
+}
+
+.mat-icon {
+  font-size: inherit;
+}

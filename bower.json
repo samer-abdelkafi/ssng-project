@@ -12,7 +12,8 @@
     "angular-http-auth": "1.2.2",
     "bootstrap": "3.3.5",
     "bootstrap-material-design": "0.4.4",
-    "angular-swagger-ui": "~0.2.3"
+    "angular-swagger-ui": "~0.2.3",
+    "font-awesome": "4.5.0"
   },
   "private": true,
   "overrides": {
@@ -38,7 +39,22 @@
         "angular": "~1.4",
         "angular-sanitize": "~1.4",
         "bootstrap-less-only": "~3.3"
-      }
+      },
+      "main": [
+        "dist/scripts/swagger-ui.js",
+        "dist/css/swagger-ui.css"
+      ]
+    },
+    "font-awesome" : {
+      "main": [
+        "css/font-awesome.css",
+        "fonts/FontAwesome.otf",
+        "fonts/fontawesome-webfont.eot",
+        "fonts/fontawesome-webfont.svg",
+        "fonts/fontawesome-webfont.ttf",
+        "fonts/fontawesome-webfont.woff",
+        "fonts/fontawesome-webfont.woff2"
+      ]
     }
   },
   "resolutions": {

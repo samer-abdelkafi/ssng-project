@@ -1,8 +1,5 @@
 package com.mycompany.myproject.model;
 
-/**
- * Created by b002ihq on 22/12/2015.
- */
 public class Response {
 
     private int code;

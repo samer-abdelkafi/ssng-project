@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Angular",
+    "description": "Front-end framework",
+    "website": "angular.io",
+    "logo": "angular.png"
+  },
+  {
+    "name": "Bootstrap",
+    "description": "Front-end css framework",
+    "website": "getbootstrap.com",
+    "logo": "bootstrap.png"
+  },
+  {
+    "name": "Spring",
+    "description": "Spring-security, Spring-data-JPA, Spring-core",
+    "website": "spring.io",
+    "logo": "spring.png"
+  },
+  {
+    "name": "Gulp",
+    "description": "Task runner for web resources optimization",
+    "website": "gulpjs.com",
+    "logo": "gulp.png"
+  },
+  {
+    "name": "Bower",
+    "description": "Front-end dependencies management",
+    "website": "bower.io",
+    "logo": "bower.png"
+  },
+  {
+    "name": "Maven",
+    "description": "Software project management",
+    "website": "maven.apache.org",
+    "logo": "maven.png"
+  },
+  {
+    "name": "Swagger",
+    "description": "Framework for APIs documentation",
+    "website": "swagger.io",
+    "logo": "swagger.png"
+  },
+  {
+    "name": "Bootstrap material",
+    "description": "Material design for Bootstrap",
+    "website": "github.com/FezVrasta/bootstrap-material-design",
+    "logo": "github"
+  },
+  {
+    "name": "SpringFox",
+    "description": "Automated JSON API documentation for API's built with Spring",
+    "website": "github.com/springfox/springfox",
+    "logo": "github"
+  },
+  {
+    "name": "Frontend maven plugin",
+    "description": "Maven plugin downloads/installs/run Node and NPM locally ",
+    "website": "github.com/eirslett/frontend-maven-plugin",
+    "logo": "github"
+  },
+  {
+    "name": "Angular Swagger UI",
+    "description": "Angular implementation of Swagger UI",
+    "website": "github.com/Orange-OpenSource/angular-swagger-ui",
+    "logo": "github"
+  },
+  {
+    "name": "Angular spinkit",
+    "description": "Spinners for AngularJS",
+    "website": "github.com/Urigo/angular-spinkit",
+    "logo": "github"
+  },
+  {
+    "name": "Font Awesome",
+    "description": "Iconic font and CSS framework",
+    "website": "github.com/FortAwesome/Font-Awesome",
+    "logo": "github"
+  },
+  {
+    "name": "Angular HTTP Auth",
+    "description": "Angular HTTP Auth Interceptor Module",
+    "website": "github.com/witoldsz/angular-http-auth",
+    "logo": "github"
+  }
+]

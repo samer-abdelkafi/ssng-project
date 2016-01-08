@@ -12,6 +12,9 @@ myapp.controller('LoginController', function ($rootScope, $scope, AuthSharedServ
             );
         }
     })
+    .controller('HomeController', function ($scope, HomeService) {
+        $scope.technos = HomeService.getTechno();
+    })
     .controller('UsersController', function ($scope, $log, UsersService) {
         $scope.users = UsersService.getAll();
     })
@@ -26,6 +29,36 @@ myapp.controller('LoginController', function ($rootScope, $scope, AuthSharedServ
 
         $scope.infos = false;
     })
+    .controller('TokensController', function ($scope, UsersService, TokensService, $q) {
+
+        var browsers = ["Firefox", 'Chrome', 'Trident']
+
+        $q.all([
+            UsersService.getAll().$promise,
+            TokensService.getAll().$promise
+        ]).then(function (data) {
+            var users = data[0];
+            var tokens = data[1];
+
+            tokens.forEach(function (token) {
+                users.forEach(function (user) {
+                    if (token.userLogin === user.login) {
+                        token.firstName = user.firstName;
+                        token.familyName = user.familyName;
+                        browsers.forEach(function (browser) {
+                            if (token.userAgent.indexOf(browser) > -1) {
+                                token.browser = browser;
+                            }
+                        });
+                    }
+                });
+            });
+
+            $scope.tokens = tokens;
+        });
+
+
+    })
     .controller('LogoutController', function (AuthSharedService) {
         AuthSharedService.logout();
     })
@@ -35,6 +68,9 @@ myapp.controller('LoginController', function ($rootScope, $scope, AuthSharedServ
         switch ($scope.code) {
             case "403" :
                 $scope.message = "Oops! you have come to unauthorised page."
+                break;
+            case "404" :
+                $scope.message = "Page not found."
                 break;
             default:
                 $scope.code = 500;
