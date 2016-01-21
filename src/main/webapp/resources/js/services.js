@@ -24,7 +24,7 @@ myapp.service('Session', function () {
 });
 
 
-myapp.service('AuthSharedService', function ($rootScope, $http, $resource, authService, Session, $timeout) {
+myapp.service('AuthSharedService', function ($rootScope, $http, $resource, authService, Session) {
     return {
         login: function (userName, password, rememberMe) {
             var config = {
@@ -45,22 +45,10 @@ myapp.service('AuthSharedService', function ($rootScope, $http, $resource, authS
         },
         getAccount: function () {
             $rootScope.loadingAccount = true;
-
             $http.get('security/account')
                 .then(function (response) {
                     authService.loginConfirmed(response.data);
-                }, function () {
-                    $rootScope.loadingAccount = false;
                 });
-
-            //$.ajax({
-            //    type: "GET",
-            //    async: false,
-            //    url: "security/account",
-            //    success: function(data) {
-            //        authService.loginConfirmed(data);
-            //    }
-            //});
         },
         isAuthorized: function (authorizedRoles) {
             if (!angular.isArray(authorizedRoles)) {

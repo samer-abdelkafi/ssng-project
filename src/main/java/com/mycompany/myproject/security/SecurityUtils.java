@@ -48,15 +48,22 @@ public final class SecurityUtils {
     }
 
 
-    /**
-     * Get the login of the current user.
-     */
     public static void sendError(HttpServletResponse response, Exception exception, int status, String message) throws IOException {
         response.setContentType("application/json;charset=UTF-8");
         response.setStatus(status);
         PrintWriter writer = response.getWriter();
         Error error = new Error("authError", exception.getMessage());
         writer.write(mapper.writeValueAsString(new Response(status, message, error)));
+        writer.flush();
+        writer.close();
+    }
+
+
+    public static void sendResponse(HttpServletResponse response, int status, Object object) throws IOException {
+        response.setContentType("application/json;charset=UTF-8");
+        PrintWriter writer = response.getWriter();
+        writer.write(mapper.writeValueAsString(object));
+        response.setStatus(status);
         writer.flush();
         writer.close();
     }

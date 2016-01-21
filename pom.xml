@@ -259,17 +259,7 @@
                             <arguments>config set cache node\npm-cache --global</arguments>
                         </configuration>
                     </execution>
-                    <execution>
-                        <id>npm version</id>
-                        <goals>
-                            <goal>npm</goal>
-                        </goals>
-                        <phase>generate-resources</phase>
-                        <configuration>
-                            <arguments>-v</arguments>
-                        </configuration>
-                    </execution>
-                    <execution>
+                   <execution>
                         <id>npm config</id>
                         <goals>
                             <goal>npm</goal>

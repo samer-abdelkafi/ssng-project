@@ -29,6 +29,7 @@ options = {
         '.fade',
         '.collapse',
         '.collapsing',
+        /(#|\.)has-error(\-[a-zA-Z]+)?/,
         /(#|\.)navbar(\-[a-zA-Z]+)?/,
         /(#|\.)dropdown(\-[a-zA-Z]+)?/,
         /(#|\.)is(\-[a-zA-Z]+)?/,

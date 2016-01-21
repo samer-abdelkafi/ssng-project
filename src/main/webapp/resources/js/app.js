@@ -81,12 +81,6 @@ myapp.config(function ($routeProvider, USER_ROLES) {
 
 myapp.run(function ($rootScope, $location, $http, AuthSharedService, Session, USER_ROLES, $q, $timeout) {
 
-    //// Assign isAuthorized to rootScope to control element display
-    //$rootScope.isAuthorized = AuthSharedService.isAuthorized;
-    //
-    //// Assign to USER_ROLES to rootScope to specify permitted role as an argument for isAuthorized method
-    //$rootScope.userRoles = USER_ROLES;
-
     $rootScope.$on('$routeChangeStart', function (event, next) {
 
         if(next.originalPath === "/login" && $rootScope.authenticated) {
