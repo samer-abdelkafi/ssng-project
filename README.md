@@ -1,7 +1,7 @@
 # ssng-project
 This is a sample project using Spring Security and AngularJs.
 
-For more information you can read my wordpress posts <a href="https://samerabdelkafi.wordpress.com/2015/09/25/gulp-on-a-maven-managed-project">here</a>
+For more information you can read my wordpress posts <a href="https://samerabdelkafi.wordpress.com/2016/01/25/secure-angularjs-application-with-spring-security">here</a>
 
 <h2>Demo</h2>
 A demo is available at this link <a target="_blank" href="http://tomcat7-samerabdelkafi.rhcloud.com/ssng-project">tomcat7-samerabdelkafi.rhcloud.com/ssng-project</a>
