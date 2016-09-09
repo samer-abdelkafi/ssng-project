@@ -28,20 +28,21 @@ myapp.service('AuthSharedService', function ($rootScope, $http, $resource, authS
     return {
         login: function (userName, password, rememberMe) {
             var config = {
-                params: {
-                    username: userName,
-                    password: password,
-                    rememberme: rememberMe
-                },
-                ignoreAuthModule: 'ignoreAuthModule'
+                ignoreAuthModule: 'ignoreAuthModule',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
             };
-            $http.post('authenticate', '', config)
+            $http.post('authenticate', $.param({
+                username: userName,
+                password: password,
+                rememberme: rememberMe
+            }), config)
                 .success(function (data, status, headers, config) {
                     authService.loginConfirmed(data);
-                }).error(function (data, status, headers, config) {
-                $rootScope.authenticationError = true;
-                Session.invalidate();
-            });
+                })
+                .error(function (data, status, headers, config) {
+                    $rootScope.authenticationError = true;
+                    Session.invalidate();
+                });
         },
         getAccount: function () {
             $rootScope.loadingAccount = true;
